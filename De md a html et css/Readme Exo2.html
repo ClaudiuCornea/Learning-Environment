@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>
+          Exercice Markdown - Intelligence Collective
+        </title>
+    </head>
+    <body>
+        <div>
+            <h1>
+                <b>Documentation MarkDown</b>
+            </h1>
+            <p>
+                <b>Pour plus d'informations corncernant ce projet rendez-vous sur le <a href="Readme Exo1.html">README</a>.</b>
+            </p>
+        </div>
+        <hr/>
+        <div>
+            <h2 id="Titre">
+                <b>Titre - Header</b>
+            </h2>
+            <p>
+                Pour convertir un texte en titre, il suffit d'ajouter un <code>#</code> avant.<br/><b>Exemple :</b>
+            </p>
+            <code>
+                # Ceci est un &lt;h1&gt;<br/>
+                ## Ceci est un &lt;h2&gt;<br/>
+                ### Ceci est un &lt;h3&gt;<br/>
+                #### Ceci est un &lt;h4&gt;<br/>
+                ##### Ceci est un &lt;h5&gt;<br/>
+                ###### Ceci est un &lt;h6&gt;
+            </code>
+            <p>
+                <i>Veuillez à bien laisser un espace entre le <code>#</code> et le texte!</i>
+            </p>
+        </div>
+        <div>
+            <h2 id="Accentuation">
+                <b>Accentuation - Emphasis</b>
+            </h2>
+            <h3 id="italique">
+                <b>Texte en <i>Italique</i></b>
+            </h3>
+            <p>
+                Afin de convertir un bout de texte en <i>italique</i>,
+                utilisez un <code>*</code> ou <code>_</code> aux extremités du texte.<br>
+                <b>Exemple :</b>
+            </p>
+            <code>
+                *Ce texte est en italique*<br/>
+                _Ce texte est en italique_
+            </code>
+            <p>
+                Résultat: <i>Ce texte est en italique</i>
+            </p>
+            <h3 id="gras"><b>Texte en Gras</b></h3>
+            <p>
+                Afin de convertir un bout de texte en <b>gras</b>,
+                utilisez deux <code>*</code> ou <code>_</code> aux extremités du texte.<br/>
+                <b>Exemple :</b>
+            </p>
+            <code>
+                **Ce texte est en gras**<br>
+                __Ce texte est en gras__
+            </code>
+            <p>
+                Resultat : <b>Ce texte est en gras</b>
+            </p>
+        </div>
+        <div>
+            <h2 id="listes">
+                <b>Les listes</b>
+            </h2>
+            <h3 id="simple">
+                <b>Listes simples</b>
+            </h3>
+            <p>
+                Il est très facile de créer des listes en MarkDown.
+                Il suffti d'ajouter un <code>*</code> avant chaque liste.<br/>
+                <b>Exemple :</b>
+            </p>
+            <pre><code>
+                * Une puce
+                * Une autre puce
+                * Une troisièle puce
+            </code></pre>
+            <p>
+                Résultat
+            </p>
+            <ul>
+                <li>Une puce</li>
+                <li>Une autre puce</li>
+                <li>Une troisième puce</li>
+            </ul>
+            <h3 id="imbriquees">
+                <b>Listes imbriquées</b>
+            </h3>
+            <p>
+                De la même manière, nous pouvons créer des <i>listes imbriquées</i> les unes dans les autres.<br/>
+                <b>Exemple :</b>
+            </p>
+            <pre><code>
+                * Une puce
+                    * Une puce imbriquée
+                    * Une deuxième puce imbriquée
+                * Une deuxiéme puce
+                * Une dernière puce
+            </code></pre>
+            <p>
+                Résultat
+            </p>
+            <ul>
+                <li>Une puce</li>
+                <ul>
+                    <li>Une puce imbriquée</li>
+                    <li>Une deuxièeme puce imbriquée</li>
+                </ul>
+                <li>Une deuxième puce</li>
+                <li>Une dernière puce</li>
+            </ul>
+            <h3 id="numerotees">
+                <b>Listes numérotées</b>
+            </h3>
+            <p>
+                Dans ce cas il suffit de commencer les puces par des numéros.<br/>
+                <b>Exemple </b>
+            </p>
+            <pre><code>
+                1. Puce 1
+                1. Puce 2
+                1. Puce 3
+            </code></pre>
+            <p>
+                Résultat
+            </p>
+            <ol type="1">
+                <li>Puce 1</li>
+                <li>Puce 2</li>
+                <li>Puce 3</li>
+            </ol>
+        </div>
+        <div>
+            <h3 id="lien">
+                <b>Lien - Link</b>
+            </h3>
+            <p>
+                Pour partager des <b>liens</b> avec MarkDown il suffit de suivre la syntaxe suivante :<br/>
+                <code>
+                    [texte du lien](url_du_lien "texte pour le titre, facultatif")
+                </code><br/>
+                Donc, le texte du lien, tel qu'il apparaitra ciquable, entre les crochets. Et l'url du lien
+                (ex.:<a href="https://fr.wikipedia.org/wiki/Markdown">https://fr.wikipedia.org/wiki/Markdown</a>)
+                entre parenthéses. On peut également rajouter un texte descriptif du lien entre guillements,
+                après l'url, qui apparaitra losque l'on survole le lien avec la souris.
+            </p>
+        </div>
+        <div>
+            <h3 id="image">
+                <b>Image</b>
+            </h3>
+            <p>
+                Pour insérer des images, il faut utiliser la syntaxe suivante :<br/>
+                <code>
+                    ![Description de l'image](URL de l'image)
+                </code>
+                <br/>
+                Exemple :
+            </p>
+            <img src="https://camo.githubusercontent.com/6cef8bc5503e318d2cabe50b90f780a741b2c509/68747470733a2f2f692e726564642e69742f787078353334353973627730312e6a7067" alt="Romain" width="600" height="400"/>
+        </div>
+        <div>
+            <h3 id="video">
+                <b>Vidéo</b>
+            </h3>
+            <p>
+                Il n'est pas possible d'implanter une vidéo avec MarkDown,
+                mais il est suggéré d'afficher une miniature cliquable qui
+                amènera vers la vidéo désirée. Sous la forme de code :<br/>
+                <code>
+                    [![Description de l'image](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+                </code>
+                <br/>
+                Exemple :
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/4zHm_6AQ7CY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+            </iframe>
+        </div>
+        <div>
+            <h3 id="tableaux">
+                <strong>Tableaux - Table</strong>
+                </h3>
+            <p>
+                Rien de plus facile que de créer des tableaux avec MarkDown.
+                Il suffit juste de mettre des <code>|</code> à la place des <i>bareaux</i> du tableau.<br/>
+                Il faut savoir que la premiere ligne sert d'entête, la seconde sert à indiquer
+                l'allignement du texte à l'intérieur des <i>cases</i> du tableau, à gauche<code>:-</code>,
+                au centre <code>:-:</code>, à droite <code>-:</code>.
+            </p>
+            <pre><code>
+                | Entete 1      |     Entete 2    |   Entete 3 |
+                | :------------ |:--------------: | ---------: |
+                | Ligne 1       |        1        |      value |
+                | Ligne 2       |        2        |      value |
+                | Ligne 3       |        3        |      value |
+            </code></pre>
+            <p>
+                <i>ou bien</i>
+            </p>
+            <pre><code>
+              |Entete 1|Entete 2|Entete 3|
+              |:-|:-:|-:|
+              Ligne 1|1|value
+            </code></pre>
+            <p>
+                (notez que <code>|</code> ne sont pas bécessaires au début ou à la fin) vont donner le même tableau :
+            </p>
+            <table>
+                <tr>
+                    <th>Entete 1</th>
+                    <th>Entete 2</th>
+                    <th>Entete 3</th>
+                </tr>
+                <tr>
+                    <th>Ligne 1</th>
+                    <th>1</th>
+                    <th>value</th>
+                </tr>
+            </table>
+            <p>
+                Oubliez pas de <b>séparer</b> le tableau d'une <b>ligne au dessus et au dessous</b>
+                et surtout n'oubliez pas les deux espaces à la fin de chaque ligne,<b>le retour à la ligne</b>.
+            </p>
+        </div>
+        <div>
+            <h3 id="code">
+                <b>Partager du code avec Markdown</b>
+            </h3>
+            <p>
+                Le partage du <b>code</b> grace au MarkDown est d'une simplicité à toute epreuve,
+                il suffit de <b>quatre espaces</b> qui se suivent pour creer ce <i>block-code</i>.
+                On peut egalement utiliser le symbole `, l'<i>anti-apostrophe</i> ou bien the <i>backticks</i>,
+                pour les anglophones, ou bien la <i>contre-apostrophe</i>.
+                Il suffit d'en mettre une au debut et la fin du code pour que ca donne une integration dans le texte,
+                exemple`code` donne <code>code</code>. Grace a ` ont peut se passer des espaces,
+                il suffit de deux lignes avec trois ` avec le <code>bloc-code</code> a l'interieur, exemple :
+            </p>
+            <pre>
+                <code>
+                    ```python
+                    def addition(a,b):
+                        return(a+b)
+                    ```
+                </code>
+            </pre>
+            <p>
+                N'oubliez pas le saut a la ligne, cad <b>les deux espaces</b> à la fin de chaque ligne.
+            </p>
+        </div>
+        <div>
+            <h3 id="citations">
+                <b>Bloc de citation(s) - Blockquotes</b>
+            </h3>
+            <p>
+                Afin de convertir un bout de texte en une citation, utilisez un > au début du texte.<br/>
+                <b>Exemple :</b>
+            </p>
+            <pre><code>
+              > Ceci est une citation
+            </code></pre>
+            <p>
+                Résultat
+            </p>
+            <blockquote>
+                Ceci est une citation
+            </blockquote>
+        </div>
+        <div>
+            <h3 id="ligne horiz">
+                <b>Lignes horizontaux</b>
+                </h3>
+            <p>
+                Les lignes horizontaux peuvent être créés en tapant trois ou quatre astérisques (*),
+                tirets (-) ou caractères soulignés (_) tous seuls sur une ligne.<br/>
+                Le code suivant fonctionnera :
+             </p>
+            <pre><code>
+              ***
+            </code></pre>
+            <p>
+                mais vous pouvez ajouter des espaces ou plus de mêmes caractères pour rendre plus
+                visible un saut de section dans la fenêtre d'édition du texte. <b>Exemple :</b>
+             </p>
+            <pre><code>
+              * * * * *
+
+              -------------------------
+
+              _ _ _ _ _
+            </code></pre>
+            <p>
+                Toutes ces méthodes donneront exactement le même résultat :
+            </p>
+            <hr/>
+            <p>
+                Exemple &#57906;
+            </p>
+        </div>
+    </body>
+</html>
