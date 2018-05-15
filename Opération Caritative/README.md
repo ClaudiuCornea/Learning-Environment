@@ -10,7 +10,6 @@ Le but de l'exercice est de créer un one-pager pour une association caritavite,
 
 ## Status
 
-Début du chantier le vendredi 11 mai 2018.
 ![](https://adambager.files.wordpress.com/2015/03/wip.png?w=240)  
-`Debut du chantier le vendredi 11 mai 2018`
+`Debut du chantier le vendredi 11 mai 2018`  
 `Reprise du chantier avec nouveau plan le mardi 15 mai`
