@@ -1,0 +1,44 @@
+nav{
+    display: flex;
+    justify-content: center;
+    padding: 1vh;
+    background-color: darkred;
+    width: 100%;
+}
+
+.menu {
+    border-radius: 20px;
+    display: inline-block;
+    padding: 1vw;
+    font-family: Arial;
+    font-size: 3vw;
+    margin: auto;
+}
+
+a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    font-family: Arial;
+    text-transform: uppercase;
+    color: darkred;
+    text-decoration: underline;
+    font-size: 4vw;
+}
+
+p, li {
+    color: #666699;
+}
+
+.date {
+    color: #33334d;
+    font-size: 2vw;
+}
+
+.texte {
+}
