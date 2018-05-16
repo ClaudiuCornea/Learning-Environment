@@ -1,9 +1,11 @@
 nav{
     display: flex;
     justify-content: center;
-    padding: 1vh;
     background-color: darkred;
     width: 100%;
+    position: fixed;
+    margin: 0px;
+    top: 0px;
 }
 
 .menu {
@@ -28,17 +30,61 @@ h2{
     text-transform: uppercase;
     color: darkred;
     text-decoration: underline;
-    font-size: 4vw;
+    font-size: 3vw;
 }
 
-p, li {
-    color: #666699;
+#Home {
+    display: block;
+    margin-top: 10%;
+}
+
+.slogan {
+    font-family: Arial;
+    font-size: 3vw;
+    text-align: center;
+}
+
+table {
+    margin-left: 10%;
+    margin-right: 10%;
+    max-width: 80%;
+    font-family: Arial;
+}
+
+th {
+    padding: 20px 0px 0px 10px;
+}
+
+tr {
+    line-height: 30px;
 }
 
 .date {
     color: #33334d;
-    font-size: 2vw;
+    font-size: 20px;
+    vertical-align: top;
+    opacity: 0.5;
 }
 
 .texte {
+    font-size: 25px;
+    vertical-align: central;
+    text-align: left;
+}
+
+ul {
+    font-family: Arial;
+    margin: 0px 10%;
+    font-size: 30px;
+}
+
+.expl {
+    border-bottom: 1px solid Grey;
+    margin: 0px 0px 30px 0px;
+    opacity: 0.5;
+}
+
+iframe {
+    display: block;
+    margin: 0px auto 0px auto;
 }
