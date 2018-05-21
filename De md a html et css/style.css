@@ -1,15 +1,21 @@
-body {
-  background-color: blue;
+body{
+  display: block;
+  font-family: Arial;
+  color: white;
+  background-color: black;
 }
-div {
-  text-align: center;
+
+.puce {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 60%;
 }
-h1 {
-  font-family:arial;
+.puce li {
+    margin: auto;
 }
-h2 {
-  font-family:arial;
-}
-h3{
-  font-family:arial;
+
+.tab {
+    display: grid;
+    
 }
