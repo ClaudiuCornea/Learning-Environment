@@ -7,6 +7,7 @@ Je vais réaliser un clicker game sur le théme Star-Wars.
 ## Parcours
 ### Etape 1
 * [x] mock-up multi platforme
+* [x] recherche images
 * [ ] du mock-up vers HTML/CSS
 
 ## Status
