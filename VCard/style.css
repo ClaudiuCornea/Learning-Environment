@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #7f87e9;
+}
+
+.triangle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 0;
+	height: 0;
+	border-bottom: 50vh solid #8DC9CA;
+	border-right: 50vw solid transparent;
+}
+
+.link_bar{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-basis: auto;
+}
+
+.all_the_vcard_info {
+    margin: 5% 0 0 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Arial;
+}
+
+.detail_list {
+    margin-left: 0;
+    padding-left: 0;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: auto;
+    font-size: 20px;
+}
+
+.detail_row {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 3.5fr 10fr;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+.icone_detail {
+    font-weight: 100;
+}
+
+.detail{
+    font-weight: 600;
+}
+
+.description {
+    font-size: 22px;
+    margin: 5% 10% 0 0;
+    max-width: 800px;
+    font-weight: 600;
+}
+
+.left_side {
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+}
+
+.citation {
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 300;
+}

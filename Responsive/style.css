@@ -1,0 +1,56 @@
+#small, #medium, #large {
+    color:white;
+}
+
+@media only screen and (max-width: 300px) {
+    body {
+        background-color: red;
+    }
+    #small {
+        font-size: 7px;
+        display: grid;
+        grid-template-columns: auto;
+    }
+    #medium {
+        display: none;
+    }
+    #large {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 300px) {
+    body {
+        background-color: green;
+    }
+    #small {
+        display: none;
+    }
+    #medium {
+        font-size: 14px;
+        display: grid;
+        grid-template-columns: 66% 33%;
+    }
+    #large {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body{
+        background-color: blue;
+    }
+    div {
+        width: 100%;
+    }
+    #small {
+        display: none;
+    }
+    #medium {
+        display: none;
+    }
+    #large {
+        display: inherit;
+        font-size: 24px;
+    }
+}
