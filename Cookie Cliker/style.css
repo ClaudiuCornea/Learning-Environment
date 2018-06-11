@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "star_wars";
+    src: url(Fonts/StarJediOutline.eot);
+    src: url(Fonts/StarJediOutline.woff) format("woff"),
+         url(Fonts/StarJediOutlineeot.eot?#iefix) format("embedded-opentype"),
+         url(Fonts/StarJediOutlineeot.svg#QuadrantaBold) format("svg");
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-family: "star_wars";
+    color: #FFDC02;
+    display: flex;
+    justify-content: center;
+    font-size: 4em;
+}
+
+@media only screen and (max-device-width: 768px){
+    
+    h2{
+        font-family: "star_wars";
+        color: #FFDC02;
+        display: flex;
+        justify-content: center;
+        font-size: 2em;
+    }
+}
