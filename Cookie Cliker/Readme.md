@@ -8,8 +8,10 @@ Je vais réaliser un clicker game sur le théme Star-Wars.
 ### Etape 1
 * [x] mock-up multi platforme
 * [x] recherche images
-* [ ] du mock-up vers HTML/CSS
-
+* [ ] du mock-up vers HTML/CSS (responsive)
+## Difficultés
+* incorporer fichier police dans le CSS
+* 
 ## Status
 ```
 Début : Lundi 11 juin.

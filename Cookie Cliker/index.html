@@ -5,56 +5,29 @@
         <meta charset="UTF-8">
         <title>Star Wars - Clicker</title>
     </head>
-    <body>
+    <body onload="initial()">
         <h1>STAR WARS - CLICKER</h1>
-        <section>
-            <article id="timer">
-                <p><span id="hour">00</span>:<span id="min">00</span>:<span id="sec">00</span></p>
-            </article>
-            <article id="gain_sec">
-                <p><span id="click">0</span>/second</p>
+        <section class="left_side">
+            <article class="info_time_gain">
+                <div class="timer">
+                    <p><span id="hour">00</span>:<span id="min">00</span>:<span id="sec">00</span></p>
+                </div>
+                <div class="gain_sec">
+                    <p><span id="click">0</span>/second</p>
+                </div>
             </article>
             <article>
                 <img id="death_star" src="Images/DeathStar.png">
             </article>
-            <article>
+            <article class="tot_gain">
                 <p><span id="total_gain">0</span></p>
             </article>
         </section>
-        <section>
+        <section id="right_side">
             <h2>Recruitment</h2>
-            <article>
-                <div>
-                    <img src="Images/Strormstrooper.png">
-                </div>
-                <div>
-                    <img src="Images/Strormstrooper.png">
-                </div>
-                <div>
-                    <img src="Images/Strormstrooper.png">
-                </div>
-                <div>
-                    <img src="Images/Strormstrooper.png">
-                </div>
-                <div>
-                    <img src="Images/Strormstrooper.png">
-                </div>
-                <div>
-                    <img src="Images/Strormstrooper.png">
-                </div>
-                <div>
-                    <img src="Images/Strormstrooper.png">
-                </div>
-                <div>
-                    <img src="Images/Strormstrooper.png">
-                </div>
-                <div>
-                    <img src="Images/Strormstrooper.png">
-                </div>
-                <div>
-                    <img src="Images/Strormstrooper.png">
-                </div>
+            <article class="update">
             </article>
         </section>
+        <script type="text/javascript" src="script.js"></script>
     </body>
 </html>
