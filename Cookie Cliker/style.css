@@ -92,10 +92,46 @@ h2{
     .update_icon{
         width: 14em;
         height: 14em;
+        opacity: 1;
     }
     
 }
 
 @media only screen and (min-device-width: 768px){
+    body{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
     
+    .info_time_gain{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .click_star{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .tot_gain{
+        display: flex;
+        justify-content: center;
+    }
+    
+    #right_side{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .update{
+        display:flex;
+        flex-direction: row;
+    }
+    
+    .update_icon{
+        height: 10em;
+        width: 10em;
+    }
 }

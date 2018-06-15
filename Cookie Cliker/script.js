@@ -56,16 +56,37 @@ function time(){
 let click_value = 1;
 let click_auto= 0;
 
-function click_able(){
+function click_able(auto){
     let total = parseInt(document.getElementById("total_gain").innerHTML);
-    total += click_value;
+    if (!auto){
+        total += click_value;
+    }else{
+        total += click_auto;
+    }
     document.getElementById("total_gain").innerHTML = total;
+    check_price();
 }
 //The upgrade zone
-function generate_update_icon(){
+let number_click_value = 0;
+let number_auto_click_value = 0;
+let price_upgrade = 10;
+
+function id_gen(){
+    let id = document.getElementById("sec").innerHTML + document.getElementById("min").innerHTML + document.getElementById("hour").innerHTML;
+    return(id);
+}
+
+function generate_update_icon(id){
     let img = document.createElement("img");
     let parent = document.getElementsByClassName("update")[0];
+    img.id= id;
     img.className = "update_icon";
+    number_click_value++;
+    img.classList.add(number_click_value);
+    img.classList.add(number_auto_click_value);
+    img.classList.add(price_upgrade);
+    price_upgrade *= 2;
+    number_auto_click_value++;
     img.src = "Images/Strormstrooper.png";
     img.style.cursor = 'pointer';
     parent.appendChild(img);
@@ -77,25 +98,40 @@ function generate_icons(number){
     }
 }
 
-function hide(cible){
-    // cible.target.style.display = 'none';
-    console.log(cible.target)
+function use_upgrade(cible){
+    let update = cible.srcElement.classList;
+    let total = parseInt(document.getElementById("total_gain").innerHTML);
+    click_value += parseInt(update[1]);
+    click_auto += parseInt(update[2]);
+    total -= parseInt(update[3]);
+    document.getElementById("click").innerHTML = click_auto;
+    document.getElementById("total_gain").innerHTML = total;
     cible.target.remove();
-    // generate_update_icon();
+    generate_update_icon(id_gen());
+    check_price();
 }
 
-document.getElementById("right_side").addEventListener('click',hide);
-document.getElementById("death_star").addEventListener('click',click_able);
+function check_price(){
+    let items = document.getElementsByClassName("update_icon");
+    let total = parseInt(document.getElementById("total_gain").innerHTML);
+    for (let i = 0; i < items.length; i++){
+        let price = items[i].classList;
+        let id = items[i].id;
+        if (price[3] <= total){
+           items[i].style.opacity = "1";
+           document.getElementById(id).addEventListener('click',use_upgrade);
+        }
+        else{
+            items[i].style.opacity = "0.4";
+        }
+    }
+}
 
 function initial(){
     setInterval(time,1000);
     background_stars();
     generate_icons(4);
+    check_price();
+    setInterval(() => click_able(true),1000);
+    document.getElementById("death_star").addEventListener('click',() => click_able());
 }
-
-function test(){
-    x = document.getElementById("sec").innerHTML + document.getElementById("min").innerHTML + document.getElementById("hour").innerHTML
-    console.log(x);
-}
-
-setInterval(test,5000)
