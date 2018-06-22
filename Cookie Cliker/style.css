@@ -6,18 +6,42 @@
          url(Fonts/StarJediOutlineeot.svg#QuadrantaBold) format("svg");
 }
 
+
+@keyframes appear{
+    0% {opacity : 0;}
+    100% {opacity : 1;}
+}
+
+@keyframes up_down{
+    0% {transform: translate(0px, 0px); opacity: 0;}
+    50% {transform: translate(0px, 200px); opacity : 1;}
+    100% {transform: translate(0px, 400px); opacity: 0;}
+}
+
+@keyframes right_left{
+    0% {transform: translate(0px); opacity: 0;}
+    50% {transform: translate(200px); opacity : 1;}
+    100% {transform: translate(400px); opacity: 0;}
+}
+
+@keyframes pulsate{
+    0%{transform:scale(1)}
+    50%{transform:scale(0.8)}
+    100%{transform:scale(1)}
+}
+
 body{
     margin: 0;
     padding: 0;
     background-color: black;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .star{
     position: absolute;
-    width: 2px;
-    height: 2px;
     background-color: white;
-    z-index: -1;
 }
 
 h1{

@@ -10,9 +10,10 @@ Je vais réaliser un clicker game sur le théme Star-Wars.
 * generer les upgrade-able
 * generer les id
 * recupérer les valeurs des upgrade-able
+* animer les étoiles
+* relancer une animation onclick
 ## Status
 ```
 Début : Lundi 11 juin.
 Status : I'm working on it!
-Fin prévue : Max( Vendredi 15 juin.
 ```

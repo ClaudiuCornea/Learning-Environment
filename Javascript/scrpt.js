@@ -1,3 +1,31 @@
+function lol(array) {
+    let result = [];
+    for (let i of array){
+        console.log(i);
+        if (i[0] == 'a'){
+            result.push(i);
+        }
+    }
+    return(result);
+}
+
+console.log(lol(['bananas', 'apples', 'pears', 'avocados']));
+
+function remplaceECar(texte){
+    let result = '',
+        first_e = texte.indexOf('e');
+    for (let i=0; i<texte.length;i++){
+        if (i == first_e){
+            result+= " ";
+        }else{
+            result+= texte[i];
+        }
+    }
+    return(result);
+}
+
+console.log(remplaceECar('Ce texte à une certaine taille'));
+
 function calc_age(){
     let actual_y,
     bird_y,
