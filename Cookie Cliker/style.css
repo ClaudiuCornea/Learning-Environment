@@ -6,7 +6,6 @@
          url(Fonts/StarJediOutlineeot.svg#QuadrantaBold) format("svg");
 }
 
-
 @keyframes appear{
     0% {opacity : 0;}
     100% {opacity : 1;}
@@ -37,6 +36,14 @@ body{
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    position: relative;
+}
+
+.wrapper{
+    position: absolute;
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
 }
 
 .star{
@@ -66,7 +73,30 @@ h2{
     color: #FFDC02;
 }
 
-@media only screen and (max-device-width: 768px){
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media only screen and (max-device-width: 600px){
 
     h1{
         font-size: 4em;
@@ -79,13 +109,22 @@ h2{
         font-size: 3em;
     }
     
-    .left_side{
+    .game{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #left_side{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
     
     .info_time_gain{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         font-size: 3em;
         margin: 0;
     }
@@ -119,12 +158,70 @@ h2{
         opacity: 1;
     }
     
+    .tooltip .tooltiptext {
+        width : 400px;
+        bottom : 100%;
+        left : 50%;
+        margin-left : -200px;
+        font-size: 3em;
+    }
+    
 }
 
+@media only screen and (min-device-width: 600px){
+    h1{
+        position : absolute;
+        left: 0;
+        right: 0;
+        font-size: 3em;
+        margin: 0 auto;
+    }
+    
+    .game {
+        display: flex;
+    }
+    
+    #left_side{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 3;
+    }
+    
+    .info_time_gain{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5em;
+        font-size: 1.5em;
+    }
+    
+    .tot_gain{
+        font-size: 1.5em;
+    }
+    
+    #right_side{
+        flex: 1;
+        margin-top: 5em;
+    }
+    
+    .update_icon{
+        width: 10em;
+        height: 10em;
+        opacity: 1;
+    }
+    .tooltip .tooltiptext {
+        width: 150px;
+        top: -5px;
+        left : 105%;
+        font-size: 1.5em;
+    }
+}    
+
 @media only screen and (min-device-width: 768px){
-    body{
-        display: grid;
-        grid-template-columns: 50% 50%;
+    
+    #left_side{
+        flex: 1;
     }
     
     .info_time_gain{
@@ -158,4 +255,12 @@ h2{
         height: 10em;
         width: 10em;
     }
+    
+    .tooltip .tooltiptext {
+        width : 200px;
+        top : 100%;
+        left : 50%;
+        margin-left : -100px;
+    }
+   
 }

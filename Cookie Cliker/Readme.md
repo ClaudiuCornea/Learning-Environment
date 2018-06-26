@@ -12,6 +12,15 @@ Je vais réaliser un clicker game sur le théme Star-Wars.
 * recupérer les valeurs des upgrade-able
 * animer les étoiles
 * relancer une animation onclick
+* generer les casques de maniére aléatoire
+* generer le texte caché
+* Soucis avec l'affichage qui "respiraient" a cause des keyframes
+## Améliorations futures
+* améliorer JS
+* améliorer CSS
+* rajouter une image
+* options sur le nombre d'étoiles
+* options sur les keyframes
 ## Status
 ```
 Début : Lundi 11 juin.

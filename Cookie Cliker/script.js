@@ -47,7 +47,7 @@ function background_stars(){
             case 5:
                 break;
         }
-        document.body.append(star);
+        document.getElementsByClassName("stars_background")[0].append(star);
     }
 }
 // The timer
@@ -126,29 +126,74 @@ function click_able(auto){
     check_price();
 }
 //The upgrade zone
-let number_click_value = 0;
-let number_auto_click_value = 0;
 let price_upgrade = 10;
 
 function id_gen(){
-    let id = document.getElementById("milisec").innerHTML + document.getElementById("sec").innerHTML + document.getElementById("min").innerHTML + document.getElementById("hour").innerHTML;
+    let id = document.getElementById("milisec").innerHTML 
+            + document.getElementById("sec").innerHTML 
+            + document.getElementById("min").innerHTML 
+            + document.getElementById("hour").innerHTML;
     return(id);
 }
 
+function random_helmet(){
+    let helmet = random_between(0,100);
+    let result;
+    if (helmet <= 42){
+        result = ["Images/stormtrooper.png", 0];
+    }else if ((42 < helmet) && (helmet < 84)){
+        result = ["Images/imperial_guard.png", 1];
+    }else if ((84 <= helmet) && (helmet < 98)){
+        result = ["Images/darth_vader.png", 2];
+    }else{
+        result = ["Images/emperor_palpatine.png", 3];
+    }
+    return(result);
+}
+
 function generate_update_icon(id){
+    let parent_0 = document.getElementsByClassName("update")[0];
+    let parent_1 = document.createElement("div");
     let img = document.createElement("img");
-    let parent = document.getElementsByClassName("update")[0];
+    let description = document.createElement("p");
+    parent_1.className = "tooltip";
+    description.className = "tooltiptext";
+    parent_1.id = (id + "_div");
+    let helmet = random_helmet();
     img.id= id;
     img.className = "update_icon";
-    number_click_value++;
-    img.classList.add(number_click_value);
-    img.classList.add(number_auto_click_value);
-    img.classList.add(price_upgrade);
+    switch (helmet[1]){
+        case 0:
+            img.classList.add("1");
+            img.classList.add("0");
+            img.classList.add(price_upgrade);
+            description.innerHTML = "<strong>Stromtrooper</strong><br/>The assault trrops of the <strong>Galctic Empire</strong>.<br/>Gain : +1 click value<br/>Price : " + price_upgrade + " credits.";
+            break;
+        case 1:
+            img.classList.add("0");
+            img.classList.add("1");
+            img.classList.add(price_upgrade);
+            description.innerHTML = "<strong>Imperia Guard</strong><br/>The force of elite warriors who serve the <strong>Sith Emperor</strong> as his personal protectors and enforces.<br/>Gain : +1 auto click value<br/>Price : " + price_upgrade + " credits.";
+            break;
+        case 2:
+            img.classList.add("7");
+            img.classList.add("7");
+            img.classList.add(price_upgrade);
+            description.innerHTML = "<strong>Darth Vader</strong><br/>Sith Lord an apprentice of Emperor Darth Sidious.<br/>Gain :<br/>+7 click value<br/>+7 auto click value<br/>Price<br/>" + price_upgrade + " credits";
+            break;
+        case 3:
+            img.classList.add("14");
+            img.classList.add("14");
+            img.classList.add(price_upgrade);
+            description.innerHTML = "<strong>Emperor of the Gactic Empire</strong><br/>Gain :<br/>+14 click value<br/>+14 auto click value<br/>Price<br/>" + price_upgrade + " credits";
+            break;
+    }
     price_upgrade *= 2;
-    number_auto_click_value++;
-    img.src = "Images/Strormstrooper.png";
+    img.src = helmet[0];
     img.style.cursor = 'pointer';
-    parent.appendChild(img);
+    parent_0.appendChild(parent_1);
+    parent_1.appendChild(img);
+    parent_1.appendChild(description);
 }
 
 function generate_icons(number){
@@ -159,13 +204,23 @@ function generate_icons(number){
 
 function use_upgrade(cible){
     let update = cible.srcElement.classList;
+    let id = cible.srcElement.id;
+    id += "_div";
+    parent = document.getElementById(id);
     let total = parseInt(document.getElementById("total_gain").innerHTML);
-    click_value += parseInt(update[1]);
-    click_auto += parseInt(update[2]);
-    total -= parseInt(update[3]);
+    if (update.length == 4){
+        click_value += parseInt(update[1]);
+        click_auto += parseInt(update[2]);
+        total -= parseInt(update[3]);
+    }else{
+        click_value += parseInt(update[1]);
+        click_auto += parseInt(update[1]);
+        total -= parseInt(update[2]);
+    }
     document.getElementById("click").innerHTML = click_auto;
     document.getElementById("total_gain").innerHTML = total;
     cible.target.remove();
+    parent.remove();
     generate_update_icon(id_gen());
     check_price();
 }
@@ -176,11 +231,23 @@ function check_price(){
     for (let i = 0; i < items.length; i++){
         let price = items[i].classList;
         let id = items[i].id;
-        if (price[3] <= total){
-           items[i].style.opacity = "1";
-           document.getElementById(id).addEventListener('click',use_upgrade);
-        }else{
-            items[i].style.opacity = "0.4";
+        switch (price.length){
+            case 4:
+                if (price[3] <= total){
+                   items[i].style.opacity = "1";
+                   document.getElementById(id).addEventListener('click',use_upgrade);
+                }else{
+                    items[i].style.opacity = "0.4";
+                }
+                break;
+            case 3:
+                if (price[2] <= total){
+                   items[i].style.opacity = "1";
+                   document.getElementById(id).addEventListener('click',use_upgrade);
+                }else{
+                    items[i].style.opacity = "0.4";
+                }
+                break;
         }
     }
 }
@@ -190,6 +257,6 @@ function initial(){
     background_stars();
     generate_icons(4);
     check_price();
-    //setInterval(() => click_able(true),1000);
+    setInterval(() => click_able(true),1000);
     document.getElementById("death_star").addEventListener('click',() => click_able());
 }
