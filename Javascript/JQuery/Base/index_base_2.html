@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="jquery-2.2.4.js"></script>
+  <title>Exercice 1</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <form>
+    <img src="images/image.jpg" id="image" />
+    <button type="button" name="button" id="clique-moi" >Clique-moi !</button>
+  </form>
+  <a id="afficher" href="#">Afficher</a>
+  <a id="cacher" href="#">Masquer</a>
+  <div id="texte">
+    <p>Joseph Dacre Carlyle (Carlisle, 4 juin 1758 - Newcastle upon Tyne, 12 avril 1804) est un orientaliste anglais.Après ses études à l'université de Cambridge, il y devint professeur d'arabe. En 1799, il fut attaché par le gouvernement britannique à l'ambassade de Lord Elgin dans l'Empire ottoman. Il était chargé d'explorer les bibliothèques de la région (principalement celle du Sérail) pour y découvrir (et y acquérir) des manuscrits inédits de textes antiques. Il se rendit aussi en Égypte, en Terre sainte et au mont Athos. Sa mission fut, de son point de vue, un échec. Il acheta quelques centaines d'ouvrages, principalement dans les bazars de Constantinople, mais aucun ne contenait de texte inédit. Cependant, la façon dont certains manuscrits avaient été acquis, principalement ceux du patriarche de Jérusalem Anthème Ier, ainsi que la querelle entamée sur la plaine de Troie entre Carlyle et un autre professeur de Cambridge, Edward Daniel Clarke, allaient être utilisées, après la mort de Carlyle, contre Lord Elgin, dans les controverses autour de l'acquisition des « marbres d'Elgin ».De retour en Grande-Bretagne à l'automne 1801, Joseph Dacre Carlyle entama une traduction en arabe de la Bible. Sa mort en avril 1804 coupa court à ce travail.</p>
+  </div>
+   <div id="texte_1">
+    <p>Tara, originellement nommée Antarctica puis Seamaster, est une goélette française destinée à la fois à l'exploration et à la défense de l'environnement. Dans le cadre de l'Année polaire internationale, en 2007-2008, ce voilier est utilisé en Arctique par l'expédition Tara Arctic dans le but de faire des relevés permettant de mieux comprendre les changements climatiques qui s'opèrent en Arctique. En 2009, dans le cadre de l'expédition Tara Oceans, Tara parcourt les mers et les océans dans une circumnavigation de trois ans afin d'étudier le piégeage des molécules de gaz carbonique (CO2) par les micro-organismes marins comme le plancton. En avril 2016, une nouvelle expédition est montée Tara Pacific dont l'objectif est de comprendre le corail, menacé par des facteurs humains et climatiques1.</p>
+   </div>
+   <div>
+    <div class="color green" id="green"></div>
+    <div class="color red" id="red"></div>
+    <div class="color blue" id="blue"></div>
+   </div>
+   <form>
+    <label for="nom">Nom : </label><input type="text" name="nom" value="" id="nom" />
+    <label for="prenom">Prénom : </label><input type="text" name="prenom" value="" id="prenom" />
+    <button type="button" name="button" >Envoyer</button>
+  </form>
+  <script>
+    $("button").click(function(){
+        alert("lol");
+    })
+    $("button").dblclick(function(){
+        $("#image").css("with","500px");
+    })
+    $("#afficher").click(function(){
+        $("#texte").show();
+    })
+    $("#cacher").click(function(){
+        $("#texte").hide();
+    })
+    $("#green").click(function(){
+        $("#texte_1").css("color","green")
+    })
+    $("#red").click(function(){
+        $("#texte_1").css("color","red")
+    })
+    $("#blue").click(function(){
+        $("#texte_1").css("color","blue")
+    })
+    $("input").focusin(function(){
+        $(this).css("border","1px solid green")
+    })
+    $("input").focusout(function(){
+        $(this).css("border","1px solid red")
+    })
+    $("#green").mouseover(function(){
+        $("#texte_1").css("color","green")
+    })
+    $("#red").mouseover(function(){
+        $("#texte_1").css("color","red")
+    })
+    $("#blue").mouseover(function(){
+        $("#texte_1").css("color","blue")
+    })
+    $("#green").mouseout(function(){
+        $("#texte_1").css("color","black")
+    })
+    $("#red").mouseout(function(){
+        $("#texte_1").css("color","black")
+    })
+    $("#blue").mouseout(function(){
+        $("#texte_1").css("color","black")
+    })
+  </script>
+</body>
+</html>
